@@ -1,80 +1,50 @@
 html { 
-    height: -webkit-fill-available;    /* per a dispositius mòbils */
+    height: -webkit-fill-available;
 }
 body {
-    display: flex;    /* tipus de display que ofereix més prestacions que block */
-    flex-direction: column;    /* els elements es disposen de dalt cap abaix */
-    justify-content: space-between;    /* els elements, separats per espais, ocupen tot l'espai disponibles */
-    min-height: 100vh;    /* alçària de la pantalla en navegadors d'escriptori */
-    min-height: 100svh;    /* per a navegadors on la declaració anterior no és precisa */
-    min-height: -webkit-fill-available;    
-    margin: 0px;    /* elimina tots els marges del document */
-    font-family: sans-serif;    /* un tipus de lletra adient per a llocs web */
-    background-color: #FCDEE0;    /* color de fons en format #RRGGBB */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+    min-height: 100svh;
+    min-height: -webkit-fill-available;
+    margin: 0px;
+    font-family: sans-serif;
+    background-color: #FCDEE0;
 }
 .seccio {
-    flex: 1;    /* les seccions ocupen tot l'espai disponible */
-    display: none;    /* les seccions s'inicien ocultes, excepte la primera */
+    flex: 1;
+    display: none;
 }
-#seccio_1 {
-    display: flex;    /* única secció que es mostra a l'inici */
-    justify-content: center;    /* contingut centrat en la direcció de disposició */
-    align-items: center;    /* contingut centrat en la direcció transversal */
-    font-size: 4vmax;
+#superior {
+    display: flex;
+    height: 8vmax;
+    justify-content: center;
+    align-items: center;
+    font-size: 8vmax;
+    color: white;
+    background-color: #04c52b;
 }
 #menu {
-    height: 8vmax;    /* alçària d'un 8% respecte l'alçària de la pantalla */
-}
-#menu {
-    display: flex;    /* el menú és un contenidor de tipus flex */
+    display: flex;
     height: 8vmax;
 }
 #menu i{
-    flex: 1;    /* cada botó pretén ocupar tot l'espai disponible */
-    display: flex;    /* contenidor flex on centrar-hi la icona */
+    flex: 1;
+    display: flex;
     justify-content: center;
     align-items: center;
     color: white;
     background-color: #04c52b;
     font-size: 6vmax;
-    cursor: pointer;    /* en ordinadors, indica que s'hi pot fer clic */
-}
-
-#superior {
-    display: flex;
-    height: 8vmax;    /* alçària d'un 8% respecte l'alçària de la pantalla */
-    justify-content: center;    /* centra els elements en la direcció de disposició */
-    align-items: center;    /* centra els elements en la direcció perpendicular a la de disposició */
-    font-size: 8vmax;    /* mida d'un 4% respecte l'alçària de la pantalla */
-    color: white;    /* color del text */
-    background-color: #04c52b;    /* color de fons */
-}
-#seccio_1 {
-    display: flex;
-    justify-content: center;    /* contingut centrat en la direcció de disposició */
-    align-items: center;    /* contingut centrat en la direcció transversal */
-    font-size: 4vmax;
-}
-@media (orientation: landscape) {
-    body {
-        flex-direction: row;    /* sobreescriu la declaració flex-direction: column; */
-        flex-flow: row-reverse;    /* disposició de dreta a esquerra, per mostrar el menú a l'esquerra */
-    }
-    #superior {
-        display: none;    /* franja superior oculta per optimitzar l'espai */
-    }
-    #menu {
-        flex-direction: column;
-        width: 8vmax;
-        height: auto;    /* sobreescriu la declaració height: 8vmax; */
-    }
+    cursor: pointer;
 }
 #seccio_0 {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 4vmax;
+    font-size: 6vmax; /* Ajusta el tamaño del texto de los títulos de las secciones */
 }
 #credencials {
     display: flex;
@@ -83,19 +53,85 @@ body {
     font-size: 3vmax;
     margin: 5vmin;
 }
-#credencials div {    /* els 2 <div> dins de credencials */
+#credencials div {
     margin-bottom: 1vmin;
 }
-#credencials input {    /* els 2 quadres de text dins de credencials */
-    max-width: 20vmax;    /* es limita l'espai que ocupen els quadres de text */
+#credencials input {
+    max-width: 20vmax;
     font-size: 3vmax;
 }
 #botons_sessio {
     display: flex;
     align-items: center;
 }
-#botons_sessio button {    /* els 2 botons dins de botons_sessio */
+#botons_sessio button {
     font-size: 3vmax;
     padding: 2vmin;
     margin: 1vmin;
+}
+#seccio_1, #seccio_2, #seccio_3, #seccio_4 #seccio_5 {
+    font-size: 3vmax;
+}
+#tornar {
+    position: absolute;
+    left: 20px;
+    top: 20px; /* Ahora el botón estará en la esquina superior izquierda */
+    font-size: 20px;
+}
+
+#menu {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+#menu i {
+    margin: 5px;
+}
+
+#seccio_0 {
+    margin-top: calc(8vmax + 40px); /* Espacio para evitar que el botón "tornar" se solape con el contenido */
+}
+#logo {
+    position: absolute; /* Posición absoluta para el logo */
+    top: 10px; /* Distancia desde arriba */
+    right: 10px; /* Distancia desde la derecha */
+    width: 85px; /* Anchura del logo */
+    height: auto; /* Altura se ajusta automáticamente para mantener la proporción */
+}
+#seccio_4 {
+    text-align: center;
+    h2 {
+        margin-top: 20px;
+    }
+    img {
+        width: 70%; 
+        height: 70%; 
+        display: flex;
+        margin: 0 auto; /* Centra la imagen horizontalmente */
+    }
+}
+#seccio_5 {
+#dialogo {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+#dialogo p {
+    margin-bottom: 20px;
+}
+
+.oculto {
+    display: none;
+}
 }
