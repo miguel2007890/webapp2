@@ -1,59 +1,75 @@
-<!DOCTYPE html>
+<!DOCT<!DOCTYPE html>
 <html lang="ca">
 <head>
-    <meta charset="UTF-8">    <!-- codificació del text (UTF-8) -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">    <!-- adapta la visualització a les mides de la pantalla -->
-    <meta name="description" content="Descripció de la nostra webapp.">    <!-- breu descripció per als cercadors -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Descripció de la nostra webapp.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/fontawesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/solid.min.css">
-    <div id="fragment" style="width:100%"></div>
-    <link rel="stylesheet" href="index.css">
-<title>    <!-- títol que es visualitza en la part superior del navegador -->
-    Nom de la webapp
-</title>
+    <link rel="stylesheet" href="prueba.css">
+    <title>Nom de la webapp</title>
 </head>
 <body>
-    <div id="superior">    <!-- franja superior per mostar el nom de la webapp -->
+    <div id="superior">
         EcoTrade
     </div>
-    <div id="seccio_1" class="seccio">    <!-- espai central per mostrar contingut -->
+    <img src="logo2.PNG" alt="Logo" id="logo">
+    <div id="seccio_0" class="seccio">
+        <div>
+            Inici de sessió
+        </div> 
+        <div id="credencials">
+            <div>
+                <label for="nom_usuari">Nom d'usuari</label>
+                <input type="text" id="nom_usuari">
+            </div>
+            <div>
+                <label for="contrasenya">Contrasenya</label>        
+                <input type="password" id="contrasenya">
+            </div>
+        </div>
+        <div id="botons_sessio">
+            <button onclick="inici_sessio()">Inicia sessió</button>
+            <button onclick="nou_usuari()">Nou usuari</button>
+          </div>      
+    </div> 
+    <div id="menu">
+        <i id="boto_1" class="fa-solid fa-house"></i>
+        <i id="boto_2" class="fa-solid fa-store"></i>
+        <i id="boto_3" class="fa-solid fa-cart-shopping"></i>
+        <i id="boto_4" class="fa-solid fa-user-group"></i>
+        <i id="boto_5" class="fa-solid fa-right-from-bracket"></i>
+    </div> 
+
+    <div id="seccio_1" class="seccio">
         Pàgina principal
+        <button id="tornar">Tornar</button>
     </div>
+
     <div id="seccio_2" class="seccio">
         Productes
+        <button id="tornar">Tornar</button>
     </div>
+
     <div id="seccio_3" class="seccio">
         Carret de la compra
+        <button id="tornar">Tornar</button>
     </div>
+
     <div id="seccio_4" class="seccio">
         Membres del grup
+        <img src="Capturamembres.PNG" alt="Captura de pantalla de mi aplicación">
+        <button id="tornar">Tornar</button>
     </div>
-    <div id="menu">    <!-- franja inferior per al menú de navegació -->
-    </div> 
-    <div id="menu">      
-        <i id="boto_1" class="fa-solid fa-house"></i>    <!-- Pàgina principal -->     
-        <i id="boto_2" class="fa-solid fa-store"></i>   <!-- Botiga -->
-        <i id="boto_3" class="fa-solid fa-cart-shopping"></i>     <!-- carret de la compra -->
-        <i id="boto_4" class="fa-solid fa-user-group"></i>    <!-- Membres del grup -->
-        <i class="fa-solid fa-right-from-bracket"></i>    <!-- tancar sessió -->
-      </div>
-      <div id="seccio_0" class="seccio">
-        <div>
-          Inici de sessió    <!-- títol de la secció -->
-        </div> 
-        <div id="credencials">    <!-- contenidor per als quadres de text -->
-          <div>
-            <label for="nom_usuari">Nom d'usuari</label>
-            <input type="text" id="nom_usuari">
-          </div>
-          <div>
-            <label for="contrasenya">Contrasenya</label>        
-            <input type="password" id="contrasenya">
-          </div>
-        </div>
-        <div id="botons_sessio">    <!-- contenidor per als botons -->
-          <button>Inicia sessió</button>
-          <button>Nou usuari</button>
-        </div>         
-      </body>
+    <div id="seccio_5" class="seccio">
+        Sortida
+        <button id="dialogo" class="oculto">
+        <p>Realment vols sortir?</p>
+        <button id="confirmar">Sortir</button>
+        <button id="cancelar">Cancel·lar</button>
+        <button id="tornar">Tornar</button>
+    </div>
+    <script src="prueba.js"></script>
+</body>
+</html>
 </html>
