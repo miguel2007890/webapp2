@@ -75,12 +75,12 @@ body {
 #tornar {
     position: absolute;
     left: 20px;
-    top: 20px; /* Ahora el botón estará en la esquina superior izquierda */
-    font-size: 20px;
+    top: 20px;
+    font-size: 2vmax; /* Ajusta el tamaño del botón en relación con el tamaño de la pantalla */
 }
 
 #menu {
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: flex-end;
     position: absolute;
@@ -97,11 +97,11 @@ body {
     margin-top: calc(8vmax + 40px); /* Espacio para evitar que el botón "tornar" se solape con el contenido */
 }
 #logo {
-    position: absolute; /* Posición absoluta para el logo */
-    top: 10px; /* Distancia desde arriba */
-    right: 10px; /* Distancia desde la derecha */
-    width: 85px; /* Anchura del logo */
-    height: auto; /* Altura se ajusta automáticamente para mantener la proporción */
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 90px; /* Elimina el ancho fijo y deja que el navegador calcule el ancho automáticamente */
+    height: 90px; /* También puedes eliminar esto si quieres que la altura se ajuste automáticamente */
 }
 #seccio_4 {
     text-align: center;
@@ -115,7 +115,6 @@ body {
         margin: 0 auto; /* Centra la imagen horizontalmente */
     }
 }
-#seccio_5 {
 #dialogo {
     position: fixed;
     top: 50%;
@@ -134,4 +133,19 @@ body {
 .oculto {
     display: none;
 }
+
+.productos-container {
+    display: flex; /* Muestra todos los elementos en línea horizontalmente */
+    flex-wrap: nowrap; /* Evitar que los elementos se envuelvan a la siguiente línea */
+    overflow-x: auto; /* Agregar desplazamiento horizontal si los elementos no caben en la pantalla */
+}
+.producte {
+    flex: 1; /* Permite que los elementos se expandan para llenar el espacio disponible */
+    max-width: 200px; /* Establece el ancho máximo para que los elementos no crezcan demasiado */
+    margin: 10px; /* Agrega un espacio entre las imágenes */
+    text-align: center; /* Centra el texto dentro de los contenedores */
+}
+.producte img {
+    width: 100%; /* Establece el ancho de las imágenes al 100% del contenedor */
+    height: auto; /* Permite que la altura se ajuste automáticamente para mantener la proporción */
 }
