@@ -13,12 +13,18 @@ function mostrarInicioDeSesion() {
 }
 
 // Manejador de clics para el botón de iniciar sesión
-document.getElementById("iniciar_sesion").addEventListener("click", function() {
+document.getElementById("inici_sessio").addEventListener("click", function() {
     mostrarPaginaPrincipal();
 });
 // Manejadores de clics para los botones del menú
 document.getElementById("boto_1").addEventListener("click", function() {
     mostrarPaginaPrincipal();
+    document.getElementById("seccio_2").style.display = "none"; // Mostrar la sección de productos
+    document.getElementById("seccio_1").style.display = "flex"; // Ocultar la página principal
+    document.getElementById("seccio_3").style.display = "none"; // Ocultar otras secciones si es necesario
+    document.getElementById("seccio_4").style.display = "none";
+    document.getElementById("seccio_0").style.display = "none"; // Ocultar la sección de inicio de sesión si es necesario
+    document.getElementById("seccio_5").style.display = "none";
 });
 
 document.getElementById("boto_2").addEventListener("click", function() {
@@ -84,7 +90,10 @@ document.getElementById('cancelar').addEventListener('click', function() {
     window.location.href = 'pagina_principal.html';
 });
 
-document.getElementById('confirmar').addEventListener('click', function() {
-    // Salir de la aplicación
-    window.close();
+document.getElementById("confirmar").addEventListener('click', function() {
+    window.location.reload();
 });
+function seleccionarProducto(imagen, nombre) {
+    localStorage.setItem('productoSeleccionado', JSON.stringify({ imagen: imagen, nombre: nombre }));
+    window.location.href = 'seleccion_color_cantidad.html';
+}
