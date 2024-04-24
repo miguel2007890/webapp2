@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Descripció de la nostra webapp.">
+    <link rel="stylesheet" href="seleccion_color_cantidad.css">
+    <title>Selección de Color y Cantidad</title>
+</head>
+<body>
+    <div id="superior">
+        EcoTrade
+        <img src="logo2-removebg-preview.png" alt="Logo" id="logo">
+    </div>
+
+    <div id="opciones_producto">
+        <h2>Opcions pel producte</h2>
+        <label for="color">Color:</label>
+        <select name="color" id="color">
+            <option value="rojo">Vermell</option>
+            <option value="azul">Blau</option>
+            <option value="verde">Verd</option>
+        </select>
+
+        <label for="cantidad">Quantitat:</label>
+        <input type="number" id="cantidad" name="cantidad" min="1" value="1">
+
+        <button onclick="agregarAlCarrito()">Afegir al carret</button>
+        <button id="tornaralproducte" onclick="volverAProductos()">Tornar als productes</button>
+    </div>
+
+    <script src="seleccion_color_cantidad.js"></script>
+</body>
+</html>

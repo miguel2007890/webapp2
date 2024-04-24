@@ -1,0 +1,59 @@
+html { 
+    height: -webkit-fill-available;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+    margin: 0px;
+    font-family: sans-serif;
+    background-color: #FCDEE0;
+}
+
+#superior {
+    display: flex;
+    height: 8vmax;
+    justify-content: center;
+    align-items: center;
+    font-size: 8vmax;
+    color: white;
+    background-color: #04c52b;
+}
+
+#logo {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 90px;
+    height: 90px;
+}
+
+h2 {
+    text-align: center;
+}
+
+#opciones_producto {
+    text-align: center;
+}
+
+label {
+    font-size: 3vmax;
+}
+
+select, input[type="number"] {
+    font-size: 3vmax;
+    margin-bottom: 10px;
+}
+
+button {
+    font-size: 3vmax;
+    padding: 10px 20px;
+    margin: 10px;
+}
+#tornaralproducte {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
