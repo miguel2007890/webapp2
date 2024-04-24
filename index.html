@@ -1,4 +1,4 @@
-<!DOCT<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ca">
 <head>
     <meta charset="UTF-8">
@@ -6,14 +6,14 @@
     <meta name="description" content="Descripció de la nostra webapp.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/fontawesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/solid.min.css">
-    <link rel="stylesheet" href="prueba.css">
-    <title>Nom de la webapp</title>
+    <link rel="stylesheet" href="index.css">
+    <title>EcoTrade</title>
 </head>
 <body>
     <div id="superior">
         EcoTrade
     </div>
-    <img src="logo2.PNG" alt="Logo" id="logo">
+    <img src="logo2-removebg-preview.png" alt="Logo" id="logo">
     <div id="seccio_0" class="seccio">
         <div>
             Inici de sessió
@@ -29,7 +29,7 @@
             </div>
         </div>
         <div id="botons_sessio">
-            <button onclick="inici_sessio()">Inicia sessió</button>
+            <button id="inici_sessio" onclick="inici_sessio()">Inicia sessió</button>
             <button onclick="nou_usuari()">Nou usuari</button>
           </div>      
     </div> 
@@ -43,33 +43,48 @@
 
     <div id="seccio_1" class="seccio">
         Pàgina principal
-        <button id="tornar">Tornar</button>
     </div>
 
     <div id="seccio_2" class="seccio">
         Productes
         <button id="tornar">Tornar</button>
+        <div class="productos-container">
+            <div class="producte">
+                <img src="botella.jpg" alt="Producto 1" onclick="seleccionarProducto('botella.jpg')">
+                <h6>Ampolla d'acer inoxidable. Capacitat: 1L Diversos colors 3€/u</h6>
+            </div>
+            <div class="producte">
+                <img src="bosses.entrepa.png" alt="Producto 2" onclick="seleccionarProducto('bosses.entrepa.png')">
+                <h6>Bosses per berenar porta-entrepans Diversos colors 2€/u</h6>
+            </div>
+            <div class="producte">
+                <img src="cartro.reutilitzable.png" alt="Producto 3" onclick="seleccionarProducto('cartro.reutilitzable.png')">
+                <h6>Bosses reutilitzables de cartró. Dievrsos colors 3€/u</h6>
+            </div>
+            <div class="producte">
+                <img src="gots.cafe.png" alt="Producto 4" onclick="seleccionarProducto('gots.cafe.png')">
+                <h6>Gots per al café reutilitzables. Capacitat 0,75L Diversos colors 2€/u</h6>
+            </div>
+        <div id="seleccion_producto" class="seccio">
     </div>
-
+</div>
     <div id="seccio_3" class="seccio">
-        Carret de la compra
-        <button id="tornar">Tornar</button>
+        <h2>Carret de la compra</h2>
+        <button class="tornar">Tornar</button>
     </div>
 
     <div id="seccio_4" class="seccio">
-        Membres del grup
+        <h2>Membres del grup</h2>
         <img src="Capturamembres.PNG" alt="Captura de pantalla de mi aplicación">
-        <button id="tornar">Tornar</button>
+        <button class="tornar">Tornar</button>
     </div>
     <div id="seccio_5" class="seccio">
-        Sortida
-        <button id="dialogo" class="oculto">
-        <p>Realment vols sortir?</p>
+        <h2>Sortida</h2>
+        <button id="dialogo" class="oculto">Realment vols sortir?</button>
         <button id="confirmar">Sortir</button>
         <button id="cancelar">Cancel·lar</button>
-        <button id="tornar">Tornar</button>
+        <button class="tornar">Tornar</button>
     </div>
-    <script src="prueba.js"></script>
+    <script src="index.js"></script>
 </body>
-</html>
 </html>
