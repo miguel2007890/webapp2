@@ -74,11 +74,10 @@ body {
 }
 #tornar {
     position: absolute;
-    left: 20px;
-    top: 20px;
-    font-size: 2vmax; /* Ajusta el tamaño del botón en relación con el tamaño de la pantalla */
+    top: 10px; /* Ajusta la distancia desde la parte superior */
+    left: 10px; /* Ajusta la distancia desde la parte izquierda */
+    z-index: 9999; /* Ajusta el índice z para que esté sobre otros elementos */
 }
-
 #menu {
     display: none;
     justify-content: center;
@@ -116,14 +115,17 @@ body {
     }
 }
 #dialogo {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: white;
-    padding: 20px;
-    border: 1px solid #ccc;
-    text-align: center;
+    display: none;
+}
+#seccio_5 {
+    display: none;
+    flex-direction: column; /* Mostrar los elementos en columna */
+    align-items: center; /* Centrar los elementos horizontalmente */
+    text-align: center; /* Centrar el texto */
+}
+
+#seccio_5 button {
+    margin-top: 10px; /* Agregar un espacio entre los botones */
 }
 
 #dialogo p {
@@ -131,7 +133,7 @@ body {
 }
 
 .oculto {
-    display: none;
+    display: flex;
 }
 
 .productos-container {
