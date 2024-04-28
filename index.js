@@ -62,10 +62,8 @@ document.getElementById("boto_5").addEventListener("click", function() {
     document.getElementById("seccio_5").style.display = "flex";
 });
 // Manejador de clics para el botón "tornar" en cada página
-document.querySelectorAll("#tornar").forEach(function(button) {
-    button.addEventListener("click", function() {
-        mostrarPaginaPrincipal(); // Volver a la página principal
-    });
+document.getElementById("tornar").addEventListener("click", function() {
+    mostrarPaginaPrincipal(); // Volver a la página principal
 });
 
 // Al cargar la página, mostrar la página de inicio de sesión
