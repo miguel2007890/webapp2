@@ -9,17 +9,25 @@ body {
     min-height: 100vh;
     margin: 0px;
     font-family: sans-serif;
-    background-color: #FCDEE0;
+    background-color: #eae2d6;
 }
 
-#superior {
+#superior  {
+    background: linear-gradient(
+        90deg,
+        #549a3d 0%,
+        #2b6226 77%);
+    box-shadow: 0 0 20px #523000;
     display: flex;
-    height: 8vmax;
+    height: 6vmax;
     justify-content: center;
     align-items: center;
     font-size: 8vmax;
     color: white;
     background-color: #04c52b;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgb(75, 43, 2);
+    padding: 20px;
 }
 
 #logo {
@@ -56,4 +64,9 @@ button {
     position: absolute;
     left: 10px;
     top: 10px;
+    background: linear-gradient(
+        90deg,
+        #d0b983 0%,
+        #817f46 77%);
+    border-radius: 20px;
 }
