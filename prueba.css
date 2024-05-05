@@ -10,13 +10,18 @@ body {
     min-height: -webkit-fill-available;
     margin: 0px;
     font-family: sans-serif;
-    background-color: #FCDEE0;
+    background-color: #eae2d6;
 }
 .seccio {
     flex: 1;
     display: none;
 }
 #superior {
+    background: linear-gradient(
+        90deg,
+        #549a3d 0%,
+        #2b6226 77%);
+    box-shadow: 0 0 20px #523000;
     display: flex;
     height: 8vmax;
     justify-content: center;
@@ -24,10 +29,18 @@ body {
     font-size: 8vmax;
     color: white;
     background-color: #04c52b;
+    border-radius: 90px;
+    box-shadow: 0 0 20px rgb(75, 43, 2);
+    padding: 20px;
 }
 #menu {
     display: flex;
     height: 8vmax;
+    background: linear-gradient(
+        90deg,
+        #549a3d 0%,
+        #2b6226 77%);
+        border-radius: 20px;
 }
 #menu i{
     flex: 1;
@@ -35,9 +48,11 @@ body {
     justify-content: center;
     align-items: center;
     color: white;
-    background-color: #04c52b;
     font-size: 6vmax;
     cursor: pointer;
+}
+#menu i:hover{
+    color:aqua;
 }
 #seccio_0 {
     display: flex;
@@ -74,10 +89,11 @@ body {
 }
 #tornar {
     position: absolute;
-    top: 10px; /* Ajusta la distancia desde la parte superior */
-    left: 10px; /* Ajusta la distancia desde la parte izquierda */
-    z-index: 9999; /* Ajusta el índice z para que esté sobre otros elementos */
+    left: 20px;
+    top: 20px; /* Ahora el botón estará en la esquina superior izquierda */
+    font-size: 20px;
 }
+
 #menu {
     display: none;
     justify-content: center;
@@ -89,21 +105,28 @@ body {
 }
 
 #menu i {
-    margin: 5px;
+    margin: px;
 }
 
 #seccio_0 {
     margin-top: calc(8vmax + 40px); /* Espacio para evitar que el botón "tornar" se solape con el contenido */
 }
 #logo {
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    width: 90px; /* Elimina el ancho fijo y deja que el navegador calcule el ancho automáticamente */
-    height: 90px; /* También puedes eliminar esto si quieres que la altura se ajuste automáticamente */
+    position: absolute; /* Posición absoluta para el logo */
+    top: 10px; /* Distancia desde arriba */
+    right: 10px; /* Distancia desde la derecha */
+    width: 85px; /* Anchura del logo */
+    height: auto; /* Altura se ajusta automáticamente para mantener la proporción */
+}
+
+#botella{
+    flex-direction: column;
+    align-items: flex-end;
+
 }
 #seccio_4 {
     text-align: center;
+    margin-top: 40px;
     h2 {
         margin-top: 20px;
     }
@@ -114,18 +137,16 @@ body {
         margin: 0 auto; /* Centra la imagen horizontalmente */
     }
 }
-#dialogo {
-    display: none;
-}
 #seccio_5 {
-    display: none;
-    flex-direction: column; /* Mostrar los elementos en columna */
-    align-items: center; /* Centrar los elementos horizontalmente */
-    text-align: center; /* Centrar el texto */
-}
-
-#seccio_5 button {
-    margin-top: 10px; /* Agregar un espacio entre los botones */
+#dialogo {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    text-align: center;
 }
 
 #dialogo p {
@@ -133,21 +154,51 @@ body {
 }
 
 .oculto {
-    display: flex;
+    display: none;
+}
+}
+.seccion-activa{
+color: aqua !important;
 }
 
-.productos-container {
-    display: flex; /* Muestra todos los elementos en línea horizontalmente */
-    flex-wrap: nowrap; /* Evitar que los elementos se envuelvan a la siguiente línea */
-    overflow-x: auto; /* Agregar desplazamiento horizontal si los elementos no caben en la pantalla */
+#seccio_2 {
+    margin-top: 100px; /* Mueve la tabla hacia abajo */
+    margin-right: 20px;
 }
-.producte {
-    flex: 1; /* Permite que los elementos se expandan para llenar el espacio disponible */
-    max-width: 200px; /* Establece el ancho máximo para que los elementos no crezcan demasiado */
-    margin: 10px; /* Agrega un espacio entre las imágenes */
-    text-align: center; /* Centra el texto dentro de los contenedores */
+
+.img{
+    width: 300x;
+    height: 300px;
 }
-.producte img {
-    width: 100%; /* Establece el ancho de las imágenes al 100% del contenedor */
-    height: auto; /* Permite que la altura se ajuste automáticamente para mantener la proporción */
+
+.img2{
+    width: 450px;
+    height: 300px;
+}
+
+.img3{
+    width: 400px;
+    height: 300px;
+}
+
+.img4{
+    width: 550px;
+    height: 250px;
+}
+
+#menu {
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente los elementos */
+    align-items: center; /* Centrar verticalmente los elementos */
+    height: 8vmax;
+    background: linear-gradient(
+        90deg,
+        #549a3d 0%,
+        #2b6226 77%);
+    border-radius: 20px;
+}
+
+/* Estilos para la nueva sección */
+#nueva_seccion {
+    display: none; /* Por defecto oculta la nueva sección */
 }
