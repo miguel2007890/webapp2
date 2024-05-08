@@ -103,7 +103,12 @@ document.getElementById("boto_5").addEventListener("click", function() {
 document.querySelectorAll("#tornar").forEach(function(button) {
     button.addEventListener("click", function() {
         mostrarPaginaPrincipal(); // Volver a la página principal
-    });
+});
+    document.getElementById("boto_1").classList.add("seccion-activa");
+    document.getElementById("boto_2").classList.remove("seccion-activa");
+    document.getElementById("boto_3").classList.remove("seccion-activa");
+    document.getElementById("boto_4").classList.remove("seccion-activa");
+    document.getElementById("boto_5").classList.remove("seccion-activa");
 });
 
 // Al cargar la página, mostrar la página de inicio de sesión
