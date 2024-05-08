@@ -22,7 +22,7 @@
             <div class="input-group">
               <label for="email">Email</label>
               <input type="email" name="email" placeholder="Email" id="email" required >
-              <label for="contraseña">Contrasenya</label>
+              <label for="contraseña">Contraseña</label>
               <input type="password" name="password" placeholder="Contraseña" id="contraseña" required >
               <div class="form-txt">
               </div>
@@ -42,7 +42,20 @@
     
 
     <div id="seccio_1" class="seccio">
-        Pàgina principal
+        
+        <table id="tabla">
+            <td>
+               <h6>Aplicació:</h6>
+
+<p>Eco Trade és una aplicació feta per ajudar tant al usuaris com al nostre planeta. El seu funcionament és molt fàcil, aquesta app és una botiga de productes sostenibles d'us cuotidià per reduir residus.</p>
+
+<h6>Objectiu de la aplicació:</h6>
+
+<p>· Ayudar al nostre planeta a reduir residus no sostenibles y contaminants.</p>
+
+<p>· Concenciar a la gent en els temes de contaminació. </p>
+            </td>
+        </table>
         <button class="btn" id="tornar">Tornar</button>
     </div>
 
@@ -52,6 +65,8 @@
             .transparent-table {
                 background-color: transparent;
                 border-collapse: collapse;
+                overflow: scroll;
+                height: 100px;
             }
             .transparent-table th, .transparent-table td {
                 border: none; /* Eliminar el borde */
@@ -60,49 +75,47 @@
             }
         </style>
         <!-- Agrega un nuevo div para la nueva sección -->
-<div id="nueva_seccion" class="seccio">
-    <!-- Contenido de la nueva sección -->
-    <iframe id="pagina_en_blanco" src="about:blank" frameborder="0"></iframe>
-</div>
-        <table class="transparent-table">
-            <tr>
-                <th>
-    <button type="button" id="botellaButton">
-        <img src="botella.jpg" alt="Producto 1" onclick="seleccionarProducto('botella.jpg')"  width="300" height="300px">
-    </button>
-</th>
-                
+        <div id="nueva_seccion" class="seccio">
+            <!-- Contenido de la nueva sección -->
+            <iframe id="pagina_en_blanco" src="about:blank" frameborder="0"></iframe>
+        </div>
+        <div id="tabla-productos">
+            <table class="transparent-table">
+                <tr>
+                    <th>
+                        <button type="button" id="botellaButton">
+                        <img src="botella.jpg" alt="Producto 1" onclick="seleccionarProducto('botella.jpg', 'botella')"  width="300" height="300px">
+                        </button>
+                    </th>
+                    <th>
+                        <button type="button">
+                        <img alt="Producto 1" onclick="seleccionarProducto('cartro.reutilitzable.png', 'cartro.reutilitzable')" 
+                        src="cartro.reutilitzable.png" 
+                        width="400px"
+                        height="300px"
+                        alt=""></th>
 
-                <th><button type="button">
-                    <img alt="Producto 1" onclick="seleccionarProducto('botella.jpg')" 
-                    src="cartro.reutilitzable.png" 
-                    width="400px"
-                    height="300px"
-                    alt=""></th>
-
-                <th><button type="button">
-                    <img alt="Producto 1" onclick="seleccionarProducto('botella.jpg')" 
-                    src="bosses.entrepa.png" alt="img2" 
-                    width="450px"
-                    height="300px"
-                    alt="">
-                </button></th>
-
-            </tr>
-
-                             <th><button type="button">
-                    <img alt="Producto 1" onclick="seleccionarProducto('botella.jpg')"  
-                    src="gots.cafe.png"
-                    width="300px"
-                    height="300px"
-                    alt=""
-                    ></th>
-            </tr>
-            <div id="seleccion_producto" class="seccio"></div>
-        </table>
-        
-        
-       
+                    <th>
+                        <button type="button">
+                        <img alt="Producto 1" onclick="seleccionarProducto('bosses.entrepa.png', 'bosses.entrepa')" 
+                            src="bosses.entrepa.png" alt="img2" 
+                            width="450px"
+                            height="300px"
+                            alt="">
+                        </button>
+                    </th>
+                    </tr>
+                    <th><button type="button">
+                        <img alt="Producto 1" onclick="seleccionarProducto('gots.cafe.png', 'gots.cafe')"  
+                        src="gots.cafe.png"
+                        width="300px"
+                        height="300px"
+                        alt="">
+                    </th>
+                </tr>
+                <div id="seleccion_producto" class="seccio"></div>
+            </table>
+        </div>
     </div>
 
     <div id="seccio_3" class="seccio">
