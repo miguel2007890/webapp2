@@ -214,3 +214,16 @@ color: aqua !important;
     height: 50px;
     margin-top: 10px;
 }
+#tablaseccio5{
+    width: 250px;
+    height: 500px;
+    margin-top: 10px;
+}
+#confirmar {
+    width: 100px;
+    height: 150px;
+}
+#cancelar {
+    width: 100px;
+    height: 150px;
+}
