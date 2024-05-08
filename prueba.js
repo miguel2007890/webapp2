@@ -122,10 +122,6 @@ document.querySelectorAll("#tornar").forEach(function(button) {
         document.getElementById("seccio_1").style.display = "flex"; // Mostrar solo la página principal
     });
 });
-document.getElementById('sortir').addEventListener('click', function() {
-    // Mostrar el diálogo de confirmación
-    document.getElementById('dialogo').classList.remove('oculto');
-});
 
 document.getElementById('cancelar').addEventListener('click', function() {
     // Ocultar el diálogo y volver a la página principal
@@ -136,11 +132,13 @@ document.getElementById('cancelar').addEventListener('click', function() {
 document.getElementById("confirmar").addEventListener('click', function() {
     window.location.reload();
 });
+
 function seleccionarProducto(imagen, nombre) {
     localStorage.setItem('productoSeleccionado', JSON.stringify({ imagen: imagen, nombre: nombre }));
     window.location.href = 'seleccion_color_cantidad.html';
 }
 
-document.getElementById("botellaButton").addEventListener("click", function() {
-    window.location.href = 'seleccion_color_cantidad.html';
-});
+if (window.location.hash == "#productos") {
+    mostrarPaginaPrincipal();
+    document.getElementById("boto_2").click();
+}
