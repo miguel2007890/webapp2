@@ -202,3 +202,15 @@ color: aqua !important;
 #nueva_seccion {
     display: none; /* Por defecto oculta la nueva sección */
 }
+
+#tabla-productos{
+    height: 500px;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+#tabla{
+    width: 800px;
+    height: 50px;
+    margin-top: 10px;
+}
