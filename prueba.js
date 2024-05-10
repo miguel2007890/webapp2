@@ -119,7 +119,7 @@ document.querySelectorAll("#tornar").forEach(function(button) {
         document.querySelectorAll(".seccio").forEach(function(section) {
             section.style.display = "none"; // Ocultar todas las secciones
             document.getElementById("boto_5").classList.remove("seccion-activa");
-            document.getElementById("boto_1").classList.remove("seccion-activa");
+            document.getElementById("boto_1").classList.add("seccion-activa");
             document.getElementById("boto_2").classList.remove("seccion-activa");
             document.getElementById("boto_3").classList.remove("seccion-activa");
             document.getElementById("boto_4").classList.remove("seccion-activa");
@@ -136,6 +136,7 @@ document.getElementById('cancelar').addEventListener('click', function() {
 
 document.getElementById("confirmar").addEventListener('click', function() {
     window.location.reload();
+    window.location.href = 'prueba.html'
 });
 
 function seleccionarProducto(imagen, nombre) {
