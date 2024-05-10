@@ -7,9 +7,9 @@ function volverAProductos() {
 // Función para agregar el producto al carrito
 function agregarAlCarrito() {
     // Código para agregar el producto al carrito
-    alert("¡Producte agregat al carret!");
+    alert("Producte agregat al carret!");
     // Redirigir a la página de productos
-    window.location.href = 'prueba.html';
+    window.location.href = 'prueba.html#productos';
 }
 
 procuctoSeleccionado = JSON.parse(localStorage.getItem("productoSeleccionado")).nombre;
