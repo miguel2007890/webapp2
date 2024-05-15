@@ -130,8 +130,18 @@ document.querySelectorAll("#tornar").forEach(function(button) {
 
 document.getElementById('cancelar').addEventListener('click', function() {
     // Ocultar el diálogo y volver a la página principal
-    document.getElementById('dialogo').classList.add('oculto');
-    window.location.href = 'pagina_principal.html';
+   document.getElementById("seccio_0").style.display = "none"; // Ocultar la sección de inicio de sesión si es necesario
+    document.getElementById("seccio_2").style.display = "none"; // Mostrar la sección de productos
+    document.getElementById("seccio_1").style.display = "flex"; // Ocultar la página principal
+    document.getElementById("seccio_3").style.display = "none"; // Ocultar otras secciones si es necesario
+    document.getElementById("seccio_4").style.display = "none";
+    document.getElementById("seccio_0").style.display = "none"; // Ocultar la sección de inicio de sesión si es necesario
+    document.getElementById("seccio_5").style.display = "none";
+    document.getElementById("boto_5").classList.remove("seccion-activa");
+            document.getElementById("boto_1").classList.add("seccion-activa");
+            document.getElementById("boto_2").classList.remove("seccion-activa");
+            document.getElementById("boto_3").classList.remove("seccion-activa");
+            document.getElementById("boto_4").classList.remove("seccion-activa");
 });
 
 document.getElementById("confirmar").addEventListener('click', function() {
