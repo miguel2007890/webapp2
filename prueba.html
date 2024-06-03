@@ -121,6 +121,42 @@
     <div id="seccio_3" class="seccio">
         Carret de la compra
         <button class="btn" id="tornar">Tornar</button>
+        <div id="carritoContainer"></div>
+
+        <script>
+            function loadCart() {
+                const carritoContainer = document.getElementById('carritoContainer');
+                const currentEmail = localStorage.getItem('userEmail');
+    
+    
+                const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+    
+                if (carrito.length === 0) {
+                    carritoContainer.innerHTML = '<p>El carret és buit.</p>';
+                } else {
+                    carritoContainer.innerHTML = '<ul>' + carrito.map((producto, index) => `
+                        <li>
+                            Producte ${index + 1}: Nom - ${producto.nombre}, Color - ${producto.color}, Quantitat - ${producto.cantidad}
+                        </li>
+                    `).join('') + '</ul>';
+                }
+            }
+            
+    
+            // Cargar el carrito cuando se cargue la página
+            window.onload = loadCart;
+        </script>
+        <script>
+            // Función para vaciar el carrito
+            function vaciarCarrito() {
+                localStorage.removeItem('carrito');
+            }
+        
+            // Evento para vaciar el carrito al recargar o cerrar la página
+            window.addEventListener('beforeunload', function () {
+                vaciarCarrito();
+            });
+            </script>
     </div>
 
     <div id="seccio_4" class="seccio">
@@ -141,5 +177,7 @@
 
     </div>
     <script src="prueba.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
 </body>
 </html>
