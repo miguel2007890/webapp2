@@ -228,3 +228,108 @@ color: aqua !important;
     width: 100px;
     height: 150px;
 }
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
+    margin: 0px;
+    font-family: sans-serif;
+    background-color: #eae2d6;
+}
+
+#superior {
+    background: linear-gradient(90deg, #549a3d 0%, #2b6226 77%);
+    box-shadow: 0 0 20px #523000;
+    display: flex;
+    height: 8vmax;
+    justify-content: center;
+    align-items: center;
+    font-size: 8vmax;
+    color: white;
+    background-color: #04c52b;
+    border-radius: 90px;
+    box-shadow: 0 0 20px rgb(75, 43, 2);
+    padding: 20px;
+}
+
+#menu {
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente los elementos */
+    align-items: center; /* Centrar verticalmente los elementos */
+    height: 8vmax;
+    background: linear-gradient(90deg, #549a3d 0%, #2b6226 77%);
+    border-radius: 20px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
+#menu i {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 6vmax;
+    cursor: pointer;
+}
+
+#menu i:hover {
+    color: aqua;
+}
+
+#seccio_0 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 6vmax; /* Ajusta el tamaño del texto de los títulos de las secciones */
+}
+
+#seccio_1, #seccio_2, #seccio_3, #seccio_4, #seccio_5 {
+    font-size: 3vmax;
+    margin: 20px;
+}
+
+#tornar {
+    position: absolute;
+    left: 20px;
+    top: 20px; /* Ahora el botón estará en la esquina superior izquierda */
+    font-size: 20px;
+}
+
+#logo {
+    position: absolute; /* Posición absoluta para el logo */
+    top: 10px; /* Distancia desde arriba */
+    right: 10px; /* Distancia desde la derecha */
+    width: 85px; /* Anchura del logo */
+    height: auto; /* Altura se ajusta automáticamente para mantener la proporción */
+}
+
+#seccio_2 {
+    margin-top: 100px; /* Mueve la tabla hacia abajo */
+    margin-right: 20px;
+}
+
+#tabla-productos {
+    height: 500px;
+    overflow-y: auto;
+}
+
+#tabla {
+    width: 100%;
+    margin-top: 10px;
+    table-layout: fixed;
+}
+
+#tablaseccio5 {
+    width: 100%;
+    margin-top: 10px;
+}
+
+#confirmar, #cancelar {
+    width: 100px;
+    height: 150px;
+}
