@@ -4,34 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Descripció de la nostra webapp.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/solid.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/grids-responsive-min.css">
     <link rel="stylesheet" href="seleccion_color_cantidad.css">
     <title>Selecció de Color i Quantitat</title>
 </head>
 <body>
-    <div id="superior">
-        EcoTrade
-        <img src="logo2-removebg-preview.png" alt="Logo" id="logo">
+    <table class="pure-table">
+        <tbody>   
+            <th><div id="superior">
+        </th>
+        <th> <img src="logo2-removebg-preview.png" alt="Logo" id="logo"></th>
+    </tbody>
+</table>
     </div>
-<table>
+
+<table class="pure-table">
+    <tbody>
     <tr id="producto-botella">
-        <td width ="500px"><img src="botella.jpg" alt="Producto 1" width="400" height="400px"></td>
+        <td width ="100%"><img src="botella.jpg" alt="Producto 1" width="100%" height="100%"></td>
         <td valign="top" >Ampolla d'acer inoxidable. Amb una capacitat de 1L. L'ampolla de metall, resistent i elegant, és perfecta per mantenir les begudes fredes o calentes mentre explores. Amb tapa segura i disseny durador, és la teva companya ideal per a qualsevol aventura.</td>
-        <td></td>
     </tr>
     <tr id="producto-cartro">
-        <td width="500px"><img src="cartro.reutilitzable.png" alt="Producto 1" width="400" height="400px"></td>
+        <td width="100%"><img src="cartro.reutilitzable.png" alt="Producto 1" width="100%" height="100%"></td>
         <td valign="top">Bosses reutilizables de cartró. Les nostres bosses reutilitzables és la tria intel·ligent i sostenible per a les compres. Fabricades amb materials resistents i disseny pràctic, és ideal per portar les teves coses de manera còmoda i eco-friendly. Fes la teva part pel planeta avui!</td>
-        <td></td>
     </tr>
     <tr id="producto-bosses">
-        <td width="500px"><img src="bosses.entrepa.png" alt="Producto 1" width="400" height="400px"></td>
+        <td width="100%"><img src="bosses.entrepa.png" alt="Producto 1" width="100%" height="100%"></td>
         <td valign="top">Les bosses per a entrepans reutilitzables són lopció perfecta per reduir el malbaratament de plàstic. Fabricades amb materials duradors i rentables, són ideals per portar els teus snacks de manera segura i sostenible. Sigues part del canvi avui!</td>
-        <td></td>
     </tr>
     <tr id="producto-gots">
-        <td width="500px"><img src="gots.cafe.png" alt="Producto 1" width="400" height="400px"></td>
+        <td width="100%"><img src="gots.cafe.png" alt="Producto 1" width="100%" height="100%"></td>
         <td valign="top">Gots per cafe reutilizables amb capacitat de 500ml de diversos colors. Les nostres bosses per a gots de cafè reutilitzables són l'opció eco-friendly per gaudir de les teves begudes preferides. Fabricades amb materials duradors i rentables, mantenen el teu cafè calent i ajuden a reduir el malbaratament de plàstic. Sostenibilitat amb estil!</td>
-        <td></td>
+        
     </tr>
 </table>
     <div id="opciones_producto">
@@ -49,7 +55,6 @@
         <button onclick="agregarAlCarrito()">Afegir al carret</button>
         <button id="tornaralproducte" onclick="volverAProductos()">Tornar als productes</button>
     </div>
-
     <script src="seleccion_color_cantidad.js"></script>
 </body>
 </html>
