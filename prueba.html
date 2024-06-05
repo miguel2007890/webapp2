@@ -6,14 +6,21 @@
     <meta name="description" content="Descripció de la nostra webapp.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/fontawesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/solid.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/grids-responsive-min.css">
     <link rel="stylesheet" href="prueba.css">
-    <title>Nom de la webapp</title>
+    <title>EcoTrade</title>
 </head>
 <body>
+    <table class="pure-table">
+        <tbody>
+            <th>
     <div id="superior">
         EcoTrade
     </div>
-    <img src="logo2-removebg-preview.png" alt="Logo" id="logo">
+    </th>
+    <th><img src="logo2-removebg-preview.png" alt="Logo" id="logo"></th>
+    </tbody>
+    </table>
     <div id="seccio_0" class="seccio">
             <link rel="stylesheet" href="login.css">
             <form action="javascript:Enviar();">
@@ -80,46 +87,42 @@
             <iframe id="pagina_en_blanco" src="about:blank" frameborder="0"></iframe>
         </div>
         <div id="tabla-productos">
-            <table class="transparent-table">
-                <tr>
-                    <th>
-                        <button type="button" id="botellaButton">
-                        <img src="botella.jpg" alt="Producto 1" onclick="seleccionarProducto('botella.jpg', 'botella')"  width="300" height="300px">
-                        </button>
-                    </th>
-                    <th>
-                        <button type="button">
-                        <img alt="Producto 1" onclick="seleccionarProducto('cartro.reutilitzable.png', 'cartro.reutilitzable')" 
-                        src="cartro.reutilitzable.png" 
-                        width="400px"
-                        height="300px"
-                        alt=""></th>
-
-                    <th>
-                        <button type="button">
-                        <img alt="Producto 1" onclick="seleccionarProducto('bosses.entrepa.png', 'bosses.entrepa')" 
-                            src="bosses.entrepa.png" alt="img2" 
-                            width="450px"
-                            height="300px"
-                            alt="">
-                        </button>
-                    </th>
-                    </tr>
-                    <th><button type="button">
-                        <img alt="Producto 1" onclick="seleccionarProducto('gots.cafe.png', 'gots.cafe')"  
-                        src="gots.cafe.png"
-                        width="300px"
-                        height="300px"
-                        alt="">
-                    </th>
-                </tr>
+            <table class="pure-table">
+                
+                <tbody>
+                    <tr>
+                        <td><button type="button" id="botellaButton">
+                            <img src="botella.jpg" alt="Producto 1" onclick="seleccionarProducto('botella.jpg', 'botella')"  width="300" height="300px">
+                            </button></td>
+                            <td><button type="button">
+                                <img alt="Producto 1" onclick="seleccionarProducto('cartro.reutilitzable.png', 'cartro.reutilitzable')" 
+                                src="cartro.reutilitzable.png" 
+                                width="400px"
+                                height="300px"
+                                alt=""></td>
+                                <td><button type="button">
+                                    <img alt="Producto 1" onclick="seleccionarProducto('bosses.entrepa.png', 'bosses.entrepa')" 
+                                        src="bosses.entrepa.png" alt="img2" 
+                                        width="450px"
+                                        height="300px"
+                                        alt="">
+                                    </button></td>
+                                    <td><button type="button">
+                                        <img alt="Producto 1" onclick="seleccionarProducto('gots.cafe.png', 'gots.cafe')"  
+                                        src="gots.cafe.png"
+                                        width="300px"
+                                        height="300px"
+                                        alt=""></td>
+                        </tr>
+                </tbody>
+            </table>
+                
                 <div id="seleccion_producto" class="seccio"></div>
             </table>
         </div>
     </div>
 
     <div id="seccio_3" class="seccio">
-        Carret de la compra
         <button class="btn" id="tornar">Tornar</button>
         <div id="carritoContainer"></div>
 
@@ -136,7 +139,7 @@
                 } else {
                     carritoContainer.innerHTML = '<ul>' + carrito.map((producto, index) => `
                         <li>
-                            Producte ${index + 1}: Nom - ${producto.nombre}, Color - ${producto.color}, Quantitat - ${producto.cantidad}
+                            Producte ${index + 1}:  Color - ${producto.color}, Quantitat - ${producto.cantidad}
                         </li>
                     `).join('') + '</ul>';
                 }
@@ -160,18 +163,30 @@
     </div>
 
     <div id="seccio_4" class="seccio">
+        <table class="pure-table">
+            <tbody>
+                <tr>    
+        <td>
         <img src="Capturamembres.PNG" alt="Captura de pantalla de mi aplicación">
+        </td>
+                </tr>
+    </table>
         <button class="btn" id="tornar">Tornar</button>
     </div>
     <div id="seccio_5" class="seccio">
-        <table id="tablaseccio5">
-            <td>
-        <button id="dialogo" class="oculto">
-        <p>Realment vols sortir?</p>
-        <button id="confirmar">Sortir</button>
-        <button id="cancelar">Cancel·lar</button>
+        <table class="pure-table">
+            <thead>
+                <tr>
+                    <th>Realment vols sortir?</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+        <button id="confirmar">Sortir</button></td>
+        <td><button id="cancelar">Cancel·lar</button></td>
         <button class="btn" id="tornar">Tornar</button>
-    </td>
+                </tr>
     </table>
         </div>       
 
