@@ -131,8 +131,9 @@ body {
         margin-top: 20px;
     }
     img {
-        width: 70%; 
-        height: 70%; 
+        width: 80%;
+        height: 80%;
+        object-fit: cover;
         display: flex;
         margin: 0 auto; /* Centra la imagen horizontalmente */
     }
@@ -162,29 +163,20 @@ color: aqua !important;
 }
 
 #seccio_2 {
-    margin-top: 100px; /* Mueve la tabla hacia abajo */
+    margin-top: 100%; /* Mueve la tabla hacia abajo */
     margin-right: 20px;
+    h2 {
+        margin-top: 20px;
+    }
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: flex;
+        margin: 0 auto; /* Centra la imagen horizontalmente */
+    }
 }
 
-.img{
-    width: 300x;
-    height: 300px;
-}
-
-.img2{
-    width: 450px;
-    height: 300px;
-}
-
-.img3{
-    width: 400px;
-    height: 300px;
-}
-
-.img4{
-    width: 550px;
-    height: 250px;
-}
 
 #menu {
     display: flex;
@@ -333,3 +325,4 @@ body {
     width: 100px;
     height: 150px;
 }
+
